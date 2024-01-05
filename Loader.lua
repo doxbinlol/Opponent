@@ -3,13 +3,8 @@
 -- [[ DOXBIN.LOL VAULT ON TOP AHAHAHAHAAHAHAHAHHAAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA -- ]]
 
 -- [[ Source Code Begins Here -- ]]
--- [[ Ahahahahahahahahhaahhah -- ]]
 
--- [[ AHAHAHAHAHHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHA -- ]]
--- [[ DOXBIN.LOL BEST PAID VAULT AHAHAHAHAHAHAHAHAHAHAHAAHAHAHHAHAHAHAHHA -- ]]
-
--- [[ Lua Armor Key -- ]]
-script_key = getgenv()Opponent.Start.Key; -- [[ Lua Armor Key func -- ]]
+script_key = getgenv().Opponent.Start.Key; -- [[ Lua Armor Key func -- ]]
 
 -- [[ Animations - ]]
 local AnimationIds = {
@@ -306,7 +301,7 @@ local player
 end -- [[ credits to whoever coded this -- ]]
 
 task.spawn(function()
-    if getgenv().Opponent.Checks.NoGroundShots and Plr2.Character[getgenv().Opponent.Silent.HitParts.Velocity.Y < -15 then
+    if getgenv().Opponent.Checks.NoGroundShots and Plr2.Character[getgenv().Opponent.Silent.HitParts.Velocity.Y] < -15 then
         pcall(function()
             local Target = Plr2.Character[getgenv().Opponent.Silent.HitParts]
             Target.Velocity = Vector3.new(Target.Velocity.X, (Target.Velocity.Y / 5), Target.Velocity.Z)
@@ -402,7 +397,7 @@ for i, v in pairs(game.Players:GetChildren()) do
     end
 end -- [[ credits to who ever coded it -- ]]
 
-while getgenv().Opponent.Settings.AutoPrediction) == true do
+while getgenv().Opponent.Settings.AutoPrediction == true do
     local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
     local pingValue = string.split(ping, " ")[1]
     local pingNumber = tonumber(pingValue)
@@ -447,7 +442,8 @@ local SilentAimTarget
 if getgenv().Opponent.Universal.Use_HitChance then
     if SilentAimTarget.Character.Humanoid.FloorMaterial == Enum.Material.Air then
         getgenv().Opponent.Silent.HitChance = getgenv().Opponent.Silent.AirShot_HitChance
-        end -- [[ credits to whoever coded it -- ]]
+        end
+    end -- [[ credits to whoever coded it -- ]]
         
         -- [[ Nearest Point and Nearest Part -- ]]
         task.spawn(function()
@@ -529,7 +525,9 @@ Mouse.KeyDown:Connect(
             end
         end
     end
+end
 )
+
 
 -- [[ Mode -- ]]
 local grmt = getrawmetatable(game)
@@ -624,7 +622,7 @@ LocalPlayer.Character.ChildAdded:Connect(function(Weapon)
                         Opponent['Silent'].HitChance = Opponent['GunFov']['DoubleBarrel']['Close_HitChance']
                         Opponent['Silent'].Prediction = Opponent['GunFov']['DoubleBarrel']['Close_Prediction']
                     elseif dis < Opponent['GunFov'].Mid then
-                        Opponent.['Fov'].Silent.Size = Opponent['GunFov']['DoubleBarrel']['Mid_Fov'] * 3
+                        Opponent['Fov'].Silent.Size = Opponent['GunFov']['DoubleBarrel']['Mid_Fov'] * 3
                         Opponent['Silent'].Prediction = Opponent['GunFov']['DoubleBarrel']['Mid_Prediction']
                         Opponent['Silent'].HitChance = Opponent['GunFov']['DoubleBarrel']['Mid_HitChance']
                     elseif dis < Opponent['GunFov'].Far then
@@ -671,3 +669,8 @@ LocalPlayer.Character.ChildAdded:Connect(function(Weapon)
         end
     end
 end) -- [[Credits to colloper -- ]]
+
+-- [[ Ahahahahahahahahhaahhah -- ]]
+
+-- [[ AHAHAHAHAHHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHA -- ]]
+-- [[ DOXBIN.LOL BEST PAID VAULT AHAHAHAHAHAHAHAHAHAHAHAAHAHAHHAHAHAHAHHA -- ]]
