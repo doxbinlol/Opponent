@@ -86,6 +86,8 @@ local function getnamecall()
         return "MousePos"
     elseif game.PlaceId == 9825515356 then                                                                                                                              -- hood customs
         return "GetMousePos"
+    elseif game.PlaceId == 4483381587 then
+        return = "nil"
     end
 end
 
