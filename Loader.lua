@@ -74,22 +74,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(key, gp)
     end
 end) -- [[ Credits to Evolution -- ]]
 
--- [[ Universal Support -- ]]
-local function getnamecall()
-    if game.PlaceId == 2788229376 or game.PlaceId == 14277620939 or game.PlaceId == 15518701410 or game.PlaceId == 11143225577 or game.PlaceId == 15528756840 then      -- da hood, untitled hood, custom ffa, 1v1 hood aim trainer, nostalgia hood
-        return "UpdateMousePos"
-    elseif game.PlaceId == 14412355918 or game.PlaceId == 14412601883 or game.PlaceId == 14412436145 or game.PlaceId == 14487637618 or game.PlaceId == 14413712255 then -- da downhill, da bank, da uphill, hood aim, da hood bot aim trainer
-        return "MOUSE"
-    elseif game.PlaceId == 14472848239 then                                                                                                                             -- moon hood
-        return "MoonUpdateMousePos"
-    elseif game.PlaceId == 5602055394 then                                                                                                                              -- Hood Modded
-        return "MousePos"
-    elseif game.PlaceId == 9825515356 then                                                                                                                              -- hood customs
-        return "GetMousePos"
-    elseif game.PlaceId == 4483381587 then
-        return = "nil"
-    end
-end
+
 
 
 local namecalltype = getnamecall()
